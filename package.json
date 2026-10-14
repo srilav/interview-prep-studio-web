@@ -1,0 +1,33 @@
+{
+  "name": "interview-prep-studio-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "gen": "buf generate https://github.com/srilav/interview-prep-studio-api.git#branch=main,subdir=proto",
+    "gen:local": "buf generate ../interview-prep-studio-api/proto"
+  },
+  "dependencies": {
+    "@bufbuild/protobuf": "2.2.3",
+    "@connectrpc/connect": "2.0.0",
+    "@connectrpc/connect-web": "2.0.0",
+    "@stomp/stompjs": "7.0.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-markdown": "9.0.1",
+    "react-router-dom": "6.28.0"
+  },
+  "devDependencies": {
+    "@bufbuild/buf": "1.47.2",
+    "@bufbuild/protoc-gen-es": "2.2.3",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "@vitejs/plugin-react": "4.3.4",
+    "typescript": "5.6.3",
+    "vite": "5.4.11"
+  }
+}
